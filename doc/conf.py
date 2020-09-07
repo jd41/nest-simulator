@@ -94,7 +94,8 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
     'breathe',
-    'sphinx_tabs.tabs'
+    'sphinx_tabs.tabs',
+    'hoverxref.extension'
 ]
 
 breathe_projects = {"EXTRACT_MODELS": "./xml/"}

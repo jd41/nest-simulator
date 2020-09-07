@@ -5,6 +5,8 @@ Welcome to the NEST simulator documentation!
 :orange:`Introducing NEST 3.0`
 ------------------------------
 
+Let's test the glossary! :hoverxref:`editing`
+
 NEST 3.0 provides a more intuitive experience with simplified yet versatile handling and manipulation of nodes and connections.
 
 
