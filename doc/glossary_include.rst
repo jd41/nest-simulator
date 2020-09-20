@@ -1,10 +1,9 @@
 .. TODO need to get Sphinx to not turn this file into HTML
 Hi from `glossary_include.rst`!
-|model|
 
 .. |model| replace:: :hoverxref:`glossary_model`
-
-Test 3: |model|
+.. |PyNEST| replace:: :hoverxref:`glossary_pynest`
+.. |kernel| replace:: :hoverxref:`glossary_kernel`
 
 .. .. _glossary_model_dictionary:
 .. .. _glossary_kernel:
