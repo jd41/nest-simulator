@@ -15,6 +15,8 @@ Model
 ~~~~~
 An abstract representation of a neural network's component in NEST. NEST models comprise neuron models, synapse models, generators, and recording devices (models). TODO more?
 
+Let's check if LaTeX is rendered: :math:`I(t) = I_mean + I_std*W(t)`
+
 .. _glossary_status_dictionary:
 
 Status dictionary

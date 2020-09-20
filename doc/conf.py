@@ -97,6 +97,8 @@ extensions = [
     'hoverxref.extension'
 ]
 
+hoverxref_mathjax = True
+
 breathe_projects = {"EXTRACT_MODELS": "./xml/"}
 
 breathe_default_project = "EXTRACT_MODELS"
