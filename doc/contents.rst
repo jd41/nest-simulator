@@ -20,6 +20,7 @@ Table of Contents
    ref_material/pynest_apis
    troubleshooting
    getting_help
+   glossary
 
 .. toctree::
    :maxdepth: 2
