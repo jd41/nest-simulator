@@ -1,30 +1,51 @@
 Glossary
 ==============
+
 .. include:: /glossary_include.rst
 
 NEST-specific terms
 -------------------
 .. one refers to these things by putting the right quote into | | signs, like |model|
    these shortcuts are defined in the /glossary_include.rst file, which must be included in all files that use a glossary entry.
+.. TODO include glossary.rst in toctree
 
 .. _glossary_model:
+
+Model
+~~~~~
 An abstract representation of a neural network's component in NEST. NEST models comprise neuron models, synapse models, generators, and recording devices (models). TODO more?
 
-.. _glossary_model_dictionary:
-Sometimes referred to as "parameter dictionary"
-
-.. _glossary_kernel:
-The component of NEST that performs the simulations. A user defining a neural simulation in Python interacts with it using the |PyNEST| API. Careful! In some model documentations, terms like "post-synaptic kernel" are used referring to integral kernels.
-
 .. _glossary_status_dictionary:
+
+Status dictionary
+~~~~~~~~~~~~~~~~~
 Also referred to by the name "parameter dictionary" (TODO change/unique name in doc), contains all parameters of the 
 
+.. _glossary_model_dictionary:
+
+Model dictionary
+~~~~~~~~~~~~~~~~
+NOT the status/parameter dictionary! TODO is/where is this used?
+
+.. _glossary_kernel:
+
+Kernel
+~~~~~~
+The component of NEST that performs the simulations. A user defining a neural simulation in Python interacts with it using the |PyNEST| API. Careful! In some model documentations, terms like "post-synaptic kernel" are used referring to integral kernels.
+
 .. _glossary_pynest:
+
+PyNEST
+~~~~~~
 A Python module allowing a Python script to interact with the NEST |kernel|. Documented in TODO reference to PyNEST tutorial, TODO reference to PyNEST API.
 
 .. _glossary_sli:
-TODO what do the letters in the abbreviation stand for? The low-level language to interact with the NEST kernel.
 
+SLI
+~~~
+Short for *Simulation Language Interpreter*, the low-level language (and interpreter of that language) to interact with the NEST kernel.
+
+static synapse type
 
 Common abbreviations in NEST
 ------------------------------

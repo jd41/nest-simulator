@@ -1,7 +1,10 @@
-.. This is a replaceitution.
+.. TODO need to get Sphinx to not turn this file into HTML
 Hi from `glossary_include.rst`!
+|model|
 
 .. |model| replace:: :hoverxref:`glossary_model`
+
+Test 3: |model|
 
 .. .. _glossary_model_dictionary:
 .. .. _glossary_kernel:
