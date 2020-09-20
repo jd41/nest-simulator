@@ -1,4 +1,3 @@
-.. TODO need to get Sphinx to not turn this file into HTML
 Hi from `glossary_include.rst`!
 
 .. |model| replace:: :hoverxref:`glossary_model`
