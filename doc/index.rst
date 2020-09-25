@@ -9,7 +9,7 @@ Welcome to the NEST simulator documentation!
 
 Let's test the glossary! :hoverxref:`editing`
 
-This should become a hoverxref link to a glossary entry! |model|
+This should become a hoverxref link to a glossary entry! |model| |models|
 
 NEST 3.0 provides a more intuitive experience with simplified yet versatile handling and manipulation of nodes and connections.
 

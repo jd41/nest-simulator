@@ -7,8 +7,7 @@ NEST-specific terms
 -------------------
 .. one refers to these things by putting the right quote into | | signs, like |model|
    these shortcuts are defined in the /glossary_include.rst file, which must be included in all files that use a glossary entry.
-.. TODO include glossary.rst in toctree
-
+   
 .. _glossary_model:
 
 Model

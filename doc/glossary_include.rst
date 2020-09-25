@@ -1,7 +1,9 @@
 Hi from `glossary_include.rst`!
 
-.. |model| replace:: :hoverxref:`glossary_model`
-.. |PyNEST| replace:: :hoverxref:`glossary_pynest`
+.. |model| replace:: :hoverxref:`model <glossary_model>`
+.. |models| replace:: :hoverxref:`models <glossary_model>`
+
+.. |Py NEST| replace:: :hoverxref:`glossary_pynest`
 .. |kernel| replace:: :hoverxref:`glossary_kernel`
 
 .. .. _glossary_model_dictionary:
