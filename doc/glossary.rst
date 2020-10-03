@@ -1,8 +1,6 @@
 Glossary
 ==============
 
-.. include:: /glossary_include.rst
-
 NEST-specific terms
 -------------------
 .. one refers to these things by putting the right quote into | | signs, like |model|

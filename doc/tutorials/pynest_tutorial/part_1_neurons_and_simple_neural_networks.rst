@@ -1,5 +1,3 @@
-.. include:: /glossary_include.rst
-
 Part 1: Neurons and simple neural networks
 ==========================================
 

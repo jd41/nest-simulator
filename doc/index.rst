@@ -1,5 +1,3 @@
-.. include:: /glossary_include.rst
-
 ********************************************
 Welcome to the NEST simulator documentation!
 ********************************************
