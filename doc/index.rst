@@ -5,9 +5,25 @@ Welcome to the NEST simulator documentation!
 :orange:`Introducing NEST 3.0`
 ------------------------------
 
+GLOSSARY testing, remove before production!
+
+I recommend you try |Python|_.
+
+.. |Python| replace:: Python, *the* best language around
+.. _Python: http://www.python.org/
+
 Let's test the glossary! :hoverxref:`editing`
 
 This should become a hoverxref link to a glossary entry! |model| |models|
+
+
+|CaSE spAced|
+
+|case spAced|
+
+|non-ex|
+
+|qq'q|
 
 NEST 3.0 provides a more intuitive experience with simplified yet versatile handling and manipulation of nodes and connections.
 
