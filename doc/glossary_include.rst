@@ -1,5 +1,7 @@
-Hi from `glossary_include.rst`!
-
+.. This file is automatically included in all rst files
+.. using an entry in conf.py
+.. It defines replacements for terms that are suppposed to
+.. become links to glossary entries.
 .. |model| replace:: :hoverxref:`model <glossary_model>`
 .. |models| replace:: :hoverxref:`models <glossary_model>`
 
