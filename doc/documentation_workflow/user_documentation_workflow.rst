@@ -25,6 +25,57 @@ If you notice any errors or weaknesses in the documentation, please submit an `i
 
 You can also make changes directly to your forked copy of the `NEST source code repository <https://github.com/nest/nest-simulator>`_ and create a `pull request <https://github.com/nest/nest-simulator/pulls>`_. Just follow the workflow below!
 
+Documentation checklist
++++++++++++++++++++++++
+
+When you have made a change to the documentation, feel free to consider the following rules. This list is supposed to help and not smother developershese are 
+
+-is the information correct and complete?
+-concise, every piece of writing has costs!
+-skimmable/split into paragraphs,
+bullet points when appropriate
+
+-related info together
+-important info first
+-point of view of users: open questions are answered/acknowledged, references given, appropriate
+
+-related material: link to/from
+-bad errors: thorough warnings in doc
+-clear error messages, actionable advice
+
+-redundancy
+
+-user coming from google understands subject+context from the title [tutorial titles]
+-thought about position in tree
+-correct TOC tree formatting/tree structure
+
+-unique terms for things
+-date of scripts/versions of tools needed etc.?
+
+Technical changes to documentation system (Sphinx modules etc.)
+-comments in documentation
+-grep deleted things
+-error messages/warnings count
+-grep context, sometimes it's reuse
+
+
+-grammarly
+-american vs british english
+-words too complicated
+
+-html_search_scorer
+
+TODO cases in point
+collector detector recorder parameter status dict param dict model dict
+link to https://dangitgit.com/en in NEST development workflow
+Technical writing checklists:
+
+https://medium.com/technical-writing-is-easy/checklists-in-technical-writing-ec732e6b9643 quite short, on level of small texts, seems reasonable (but partially superfluous)
+https://hmc.tamu.edu/Files/070822TSC%20Writers%20CheckList%20A.pdf very low, level, may have been mostly/completely obviated by Grammarly
+https://clickhelp.com/clickhelp-technical-writing-blog/using-checklists-in-technical-writing/ Checklists
+https://msu.edu/course/be/485/bewritingguideV2.0.pdf very thorough guide and long
+http://www.people.ku.edu/~cmckit/TechComm/TC-Scoring-Checklist.htm rather "grading rubric" than "checklist", quite high-level concepts
+http://techwhirl-1-wpengine.netdna-ssl.com/wp-content/uploads/2014/02/Documentation-Review-Checklist.docx Doc level, not so relevant IMO
 Setting up your environment
 +++++++++++++++++++++++++++
 
