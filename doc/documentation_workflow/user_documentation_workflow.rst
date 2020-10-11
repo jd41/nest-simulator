@@ -27,55 +27,77 @@ You can also make changes directly to your forked copy of the `NEST source code 
 
 Documentation checklist
 +++++++++++++++++++++++
+.. To create/add items, I looked through
+..   - my own nestdoc_problems file I sent a few months ago, with the stuff that was problematic for me when I learned NEST
+..   - cursorily through open and closed documentation PRs, to see what problems occur more often (but I didn't see that much there)
+..   - some technical writing/documentation checklists I found on the internet.
+..
+.. Technical writing checklists online:
+..
+.. https://medium.com/technical-writing-is-easy/checklists-in-technical-writing-ec732e6b9643 quite short, on level of small texts, seems reasonable (but partially superfluous through Grammarly)
+.. https://hmc.tamu.edu/Files/070822TSC%20Writers%20CheckList%20A.pdf very low level, may have been mostly/completely obviated by Grammarly
+.. http://techwhirl-1-wpengine.netdna-ssl.com/wp-content/uploads/2014/02/Documentation-Review-Checklist.docx Doc level, not so relevant IMO
+.. https://clickhelp.com/clickhelp-technical-writing-blog/using-checklists-in-technical-writing/ short and seemed useful
+.. http://www.people.ku.edu/~cmckit/TechComm/TC-Scoring-Checklist.htm rather "grading rubric" than "checklist", quite high-level concepts
+.. https://msu.edu/course/be/485/bewritingguideV2.0.pdf very thorough guide and long, not really a checklist
+..
+.. Book: Atul Gawande: "The Checklist Manifesto", examples of how organizations improved their operations by introducing checklists (e.g. doctors cutting mortality after operations by 1/3 - didn't read it so far, though)
 
-When you have made a change to the documentation, feel free to consider the following rules. This list is supposed to help and not smother developershese are 
+You can save other people - and a later version of yourself - a large multiple of your time investment by writing good documentation. Suboptimal documentation can easily provide negative value by making people commit expensive errors (PR , or just waste time before they ask a human (PR #).
 
--is the information correct and complete?
--concise, every piece of writing has costs!
--skimmable/split into paragraphs,
-bullet points when appropriate
+When you write or review a documentation pull request, please consider the following suggestion-list. This list is supposed to empower, rather than smother, developers: Decide what to check (and how thoroughly) using your own judgment - but prepare to be judged when you made a mistake after ignoring it.
 
+Documentation level
+-does this file belong here in the tree? (e.g. SLI tutorial not under "tutorials" folder)
+-Who would want to know about this, and where in the documentation should there be links? (issue #1635, e.g. Running Simulations guide not referenced by Tutorial or anything else AFAIK, so noone from my work group knew its current contents)
+-is it redundant? (issue #1634)
+-related material: link to/from
+-if some functionality associated with a string (e.g. function name etc.) is changed or deleted, `grep -r <string> <NEST-SRC>` to see where the documentation may need to be changed
+-Some pieces of texts are repeated.
+-grep strings to see if it is used somewhere else
+-error messages/compare before and after warnings count that is outputted by Sphinx (I have seen people introduce errors too)
+
+Document level
+-correct TOC tree formatting/tree structure on the left side of the RTD page (e.g. PR #1749, I also saw this problem in some tutorial/guide)
+-user coming from google understands subject+context from the title (currently an issue with many titles of tutorials/guides)
+
+Section level
+-is the information complete? (when appropriate - a tutorial should not drown the user in details, but only contain links to more thorough guides)
+-Is it concise? Every piece of writing has costs!
+-skimmable/split into paragraphs, bullet points when appropriate (e.g. my PR #1
 -related info together
 -important info first
 -point of view of users: open questions are answered/acknowledged, references given, appropriate
-
--related material: link to/from
 -bad errors: thorough warnings in doc
--clear error messages, actionable advice
 
--redundancy
+Sentence level
+-is the information correct and current?
+-point of view of users: If I, as a user, will likely have a question after reading one sentence, is this question answered or acknowledged in the next sentence?
+-unique terms for things (an expert knows that "parameters", "parameter dictionary", "status dictionary" are the same thing, "parameter" is an arbitrary member of the "status dictionary" (rather than e.g. a subset of the members), but "model dictionary" is something else. But using these interchangeably contributes to new user's confusion. Another example: recorder vs detector vs collector). Refer to the list of terms I recently found?
+-are abbreviations and jargon explained when appropriate?
+-Use Grammarly for spell, grammar, and writing checks. The free tier is already useful, the paid tier even better and also makes helpful suggestions regarding readability.
 
--user coming from google understands subject+context from the title [tutorial titles]
--thought about position in tree
--correct TOC tree formatting/tree structure
+Documentation in the code
+-Clear comments on non-obvious things (e.g. comment describing what the Sphinx extensions do, colorize.rst file - for PR #1795, the original person who included `.colorize.rst` could have saved me two hours of being wrong and researching with two minutes of documenting their change themselves).
+-NESClear error messages/warnings containing actionable advice when appropriate
+-Is it possible to make an error that is not warned about?
 
--unique terms for things
+Finally
+
 -date of scripts/versions of tools needed etc.?
 
 Technical changes to documentation system (Sphinx modules etc.)
--comments in documentation
--grep deleted things
--error messages/warnings count
--grep context, sometimes it's reuse
+-comments in documentation, update comments! (e.g. 
 
-
--grammarly
--american vs british english
--words too complicated
+Finally
+-Did you use this checklist in addition to, rather than as a substitute for, thinking on your own?
 
 -html_search_scorer
 
 TODO cases in point
 collector detector recorder parameter status dict param dict model dict
 link to https://dangitgit.com/en in NEST development workflow
-Technical writing checklists:
 
-https://medium.com/technical-writing-is-easy/checklists-in-technical-writing-ec732e6b9643 quite short, on level of small texts, seems reasonable (but partially superfluous)
-https://hmc.tamu.edu/Files/070822TSC%20Writers%20CheckList%20A.pdf very low, level, may have been mostly/completely obviated by Grammarly
-https://clickhelp.com/clickhelp-technical-writing-blog/using-checklists-in-technical-writing/ Checklists
-https://msu.edu/course/be/485/bewritingguideV2.0.pdf very thorough guide and long
-http://www.people.ku.edu/~cmckit/TechComm/TC-Scoring-Checklist.htm rather "grading rubric" than "checklist", quite high-level concepts
-http://techwhirl-1-wpengine.netdna-ssl.com/wp-content/uploads/2014/02/Documentation-Review-Checklist.docx Doc level, not so relevant IMO
 Setting up your environment
 +++++++++++++++++++++++++++
 
