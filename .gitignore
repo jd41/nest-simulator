@@ -65,3 +65,6 @@ lib/sli/rcsinfo.sli
 extras/nest_vars.sh
 
 pynest/examples/README
+doc/examples/microcircuit.png
+doc/examples/reference_data/box_plot.png
+doc/examples/reference_data/raster_plot.png

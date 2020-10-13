@@ -43,51 +43,49 @@ Documentation checklist
 ..
 .. Book: Atul Gawande: "The Checklist Manifesto", examples of how organizations improved their operations by introducing checklists (e.g. doctors cutting mortality after operations by 1/3 - didn't read it so far, though)
 
-You can save other people - and a later version of yourself - a large multiple of your time investment by writing good documentation. Suboptimal documentation can easily provide negative value by making people commit expensive errors (PR , or just waste time before they ask a human (PR #).
+You can save other people - and a later version of yourself - a large multiple of your time investment by writing good documentation. Suboptimal documentation can easily provide negative value by making people commit expensive errors (PR #1772), or just waste time before they ask a human (PR #1740).
 
-When you write or review a documentation pull request, please consider the following suggestion-list. This list is supposed to empower, rather than smother, developers: Decide what to check (and how thoroughly) using your own judgment - but prepare to be judged when you made a mistake after ignoring it.
+When you write or review a documentation pull request, please consider the following suggestion-list. This list is supposed to empower and not smother developers: Decide what to check (and how thoroughly) using your own judgment - but prepare to be judged when you made a mistake after ignoring it.
 
 Documentation level
--does this file belong here in the tree? (e.g. SLI tutorial not under "tutorials" folder)
--Who would want to know about this, and where in the documentation should there be links? (issue #1635, e.g. Running Simulations guide not referenced by Tutorial or anything else AFAIK, so noone from my work group knew its current contents)
--is it redundant? (issue #1634)
--related material: link to/from
--if some functionality associated with a string (e.g. function name etc.) is changed or deleted, `grep -r <string> <NEST-SRC>` to see where the documentation may need to be changed
--Some pieces of texts are repeated.
--grep strings to see if it is used somewhere else
--error messages/compare before and after warnings count that is outputted by Sphinx (I have seen people introduce errors too)
+
+-does your file belong there in the tree? (e.g. SLI tutorial not in "tutorials" folder)
+-Who would want to know about your content, and where in the documentation should it be referenced? (issue #1635, e.g. Running Simulations guide not referenced by Tutorial or anything else AFAIK, so noone from my work group knew its current contents)
+-is it redundant? (issue #1634 for some examples and justification)
+-if you document some change associated with a string (function name etc.), `grep -r <string> <NEST-SRC>` to see if the documentation needs to be changed somewhere else
+-Some pieces of texts are repeated multiple times throughout the documentation. Use `grep -r <string> <NEST-SRC>` to find them if you want to change them all at once
+-Compare before and after warnings count during the documentation build process, check that you didn't introduce any new warnings
+
+Titles
+-Does the document title make subject+context clear to someone arriving from a search engine? (currently an issue with many titles of tutorials/guides, or SLI/PyNEST stuff not making clear that it refers to SLI/PyNEST)
+-Does the document title, vs. those of other documents, allow the reader to clearly distinguish the subject of this file from the subject of all other files? (e.g. MUSIC guide vs MUSIC tutorial: not so clear when one would want to look into what, or "Running Simulations" guide vs NEST tutorial, see also #1634)
+-Do all section titles make the subject clear? (not sure about this checklist entry, it may lead to too-verbose titles)
+-Appropriate hierarchy of sections and subsections?
+-correct TOC (table of contents) tree formatting/tree structure on the left side of the RTD page (e.g. PR #1749, I also saw this problem in some tutorial/guide)
 
 Document level
--correct TOC tree formatting/tree structure on the left side of the RTD page (e.g. PR #1749, I also saw this problem in some tutorial/guide)
--user coming from google understands subject+context from the title (currently an issue with many titles of tutorials/guides)
+-What is the related material a reader might want to know about? Is it linked in the document?
 
 Section level
--is the information complete? (when appropriate - a tutorial should not drown the user in details, but only contain links to more thorough guides)
+-Is the information complete? (when appropriate - a tutorial should not drown the user in details, but contain links to more thorough reference material) (e.g. I accidentally removed a piece of information in one PR, see https://github.com/nest/nest-simulator/pull/1740#issuecomment-701348226)
+-When appropriate, did you document the date of scripts/versions of tools needed etc.?
 -Is it concise? Every piece of writing has costs!
--skimmable/split into paragraphs, bullet points when appropriate (e.g. my PR #1
--related info together
--important info first
--point of view of users: open questions are answered/acknowledged, references given, appropriate
--bad errors: thorough warnings in doc
+-skimmable/split into paragraphs, bullet points when appropriate (e.g. my first attempt at PR #1633?)
+-Is related information grouped together?
+-Does important information appear first, and/or is the sequence of statements logical?
+-What errors could the user make? Are they being warned against clearly and visibly (maybe in several places if appropriate)? In the code, do they cause clear error messages with actionable advice? (PR #1772)
 
 Sentence level
 -is the information correct and current?
--point of view of users: If I, as a user, will likely have a question after reading one sentence, is this question answered or acknowledged in the next sentence?
--unique terms for things (an expert knows that "parameters", "parameter dictionary", "status dictionary" are the same thing, "parameter" is an arbitrary member of the "status dictionary" (rather than e.g. a subset of the members), but "model dictionary" is something else. But using these interchangeably contributes to new user's confusion. Another example: recorder vs detector vs collector). Refer to the list of terms I recently found?
+-Did you try the commands/examples? (as mentioned above, use your own judgment whether this is necessary)
+-point of view of users: If I, as a new user, will likely have a question after reading one sentence, is this question answered or acknowledged in the next sentence? (PR #1740)
+-unique terms for things (an expert knows that "parameters", "parameter dictionary", "status dictionary" are the same thing, "parameter" is an arbitrary member of the "status dictionary" (rather than e.g. a subset of the members), but "model dictionary" is something else. But using these interchangeably contributes to new user's confusion. Another example: recorder vs detector vs collector). Refer to the list of terms I recently found in the glossary?
 -are abbreviations and jargon explained when appropriate?
 -Use Grammarly for spell, grammar, and writing checks. The free tier is already useful, the paid tier even better and also makes helpful suggestions regarding readability.
 
 Documentation in the code
--Clear comments on non-obvious things (e.g. comment describing what the Sphinx extensions do, colorize.rst file - for PR #1795, the original person who included `.colorize.rst` could have saved me two hours of being wrong and researching with two minutes of documenting their change themselves).
--NESClear error messages/warnings containing actionable advice when appropriate
--Is it possible to make an error that is not warned about?
-
-Finally
-
--date of scripts/versions of tools needed etc.?
-
-Technical changes to documentation system (Sphinx modules etc.)
--comments in documentation, update comments! (e.g. 
+-Clear comments on non-obvious things (e.g. comment describing what the Sphinx extensions do, colorize.rst file for PR #1795, the original person who included `.colorize.rst` could have saved me two hours of being wrong and researching when fixing their bug with two minutes of documenting their change themselves). When appropriate, refer to a Pull Request ID.
+-Clear error messages (equivalent to entry in "section level")?
 
 Finally
 -Did you use this checklist in addition to, rather than as a substitute for, thinking on your own?
