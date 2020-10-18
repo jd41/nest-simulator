@@ -60,8 +60,8 @@ When you write or review a documentation PR, please consider the following sugge
 .. warning::
    The entries in "Documentation level" and "Titles" should be checked by the NEST documentation team, which has an overview of the complete documentation.
 
-Documentation level
-~~~~~~~~~~~~~~~~~~~
+Documentation level - should be checked by Doc team
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 **D1. Does your content have a clear purpose that isn't fulfilled by anything that exists elsewhere?**
 
    - See issue #1634 for some examples and justifications.
@@ -74,9 +74,13 @@ Documentation level
 
 **D3. Conversely: What is the relevant related material? Are there appropriate outbound references to that material?**
 
-**D4. Is your file in a good position in the documentation tree?**
+**D11. Does the information? Is the split into files appropriate?**
+   - Various transition guides/breaking-backwards-compatibility information scattered throughout the documentation, if thndom numbers guide" contains transition guide to NEST 2.4, in a completely different place than the NEST 2 to NEST 3 transition guides, if the NEST 2 to NEST 3 section gathered information about all sorts of backwards compatibility and the rest of the doc just described the status quo (with a link to there), this would be more logical IMO (but this is a matter of taste to some extent)
 
-   - SLI tutorial not in "tutorials" folder
+**D4. Does the information in this file belong here in the documentation tree? File contained in TOC tree?**
+
+   - SLI tutorial not in "tutorials" folder, not even in TOC tree
+   - currently, backwards compatibility break/transition information is partially scattered across guides, nonexistent (dead links) and in a "NEST 2 to NEST 3 transition guide".
 
 **D5. Did you use Grammarly for spelling, grammar, and writing suggestions?**
    
@@ -95,8 +99,13 @@ Documentation level
 
 **D9. Does the content render correctly, and does the formatting conform to the NEST documentation standards?**
 
-Titles and document structure
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**D10. Is the usage of terminology consistent with the rest of the documentation? Is new terminology hard to confuse with what already exists?**
+
+   - An expert knows that "parameters", "parameter dictionary", "status dictionary" are the same thing, "parameter" is an arbitrary member of the "status dictionary" (rather than a subset of the members), but "model dictionary" is something else. But using the first 4 interchangeably within the documentation contributes to new user's confusion. The last one is different in meaning, but might be confused with the first 4.
+   - Another example: recorder vs detector vs collector.
+
+Titles and document structure - should be checked by Doc team
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 **T1. Does the document title make subject and context clear to someone arriving from a search engine?**
    
    - Currently an issue with many titles of tutorial/guide sections
@@ -116,7 +125,7 @@ Titles and document structure
    
    - These goals are usually contradictory to some extent.
 
-**T5. Appropriate hierarchy of sections and subsections?**
+**T5. Appropriate split into, and hierarchy of, sections and subsections?**
 
 **T6. Correct TOC (table of contents) tree structure on the left side of the RTD page?**
    
@@ -152,14 +161,11 @@ Phrase level
 
 **P3. Did you document the versions of tools with which you tried?**
 
-**P4. Do you use the terms in the glossary?**
+**P4. Are abbreviations and jargon explained when appropriate, linked to the glossary, or both?**
 
-   - An expert knows that "parameters", "parameter dictionary", "status dictionary" are the same thing, "parameter" is an arbitrary member of the "status dictionary" (rather than a subset of the members), but "model dictionary" is something else. But using these interchangeably contributes to new user's confusion.
-   - Another example: recorder vs detector vs collector.
+**P5. Is the information correct and up-to-date?**
 
-**P5. Are abbreviations and jargon explained when appropriate, linked to the glossary, or both?**
-
-**P6. Is the information correct and up-to-date?**
+**P6. Do the external links work?**
 
 Documentation in the code
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -244,13 +250,11 @@ To edit existing `reStructuredText <https://thomas-cokelaer.info/tutorials/sphin
 
 1. You can edit and/or add ``.rst`` files in the ``doc`` directory using your editor of choice.
 
-2. If you create a new page, open ``contents.rst`` in the ``doc`` directory and add the file name under ``.. toctree::``. This will ensure it appears on the NEST simulator documentation's table of contents.
+2. Pay attention to the checklist above
 
-3. If you rename or move a file, please make sure you update all the corresponding cross-references.
+3. Save your changes.
 
-4. Save your changes.
-
-5. Re-render documentation as described above.
+4. Re-render documentation as described above.
 
 Previewing on Read the Docs (optional)
 ++++++++++++++++++++++++++++++++++++++
