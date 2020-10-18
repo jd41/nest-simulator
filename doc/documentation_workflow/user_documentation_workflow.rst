@@ -88,9 +88,10 @@ Documentation level - should be checked by Doc team
 
 **D7. Some pieces of texts are repeated multiple times throughout the documentation. If you changed one, did you use `grep -r <string> <NEST-SRC>` to find them all?**
 
-**D8. Did the change introduce new warnings/errors during the documentation build process?**
+**D8. Did the change introduce new warnings/errors during the documentation build process? If you removed or renamed a file, are there now warnings related to that file?**
    
    - Sphinx outputs a count of warnings near the end; compare before/after.
+   - `make html 2>&1|grep <file-name-without-path-and-suffix>` to find warnings pertaining to your file (in particular broken references after you removed/renamed it)
    - Issue #1794 could have been avoided that way.
    - Many current warnings reflect real problems with the rendering output.
 
