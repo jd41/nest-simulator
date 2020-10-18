@@ -74,13 +74,10 @@ Documentation level - should be checked by Doc team
 
 **D3. Conversely: What is the relevant related material? Are there appropriate outbound references to that material?**
 
-**D11. Does the information? Is the split into files appropriate?**
-   - Various transition guides/breaking-backwards-compatibility information scattered throughout the documentation, if thndom numbers guide" contains transition guide to NEST 2.4, in a completely different place than the NEST 2 to NEST 3 transition guides, if the NEST 2 to NEST 3 section gathered information about all sorts of backwards compatibility and the rest of the doc just described the status quo (with a link to there), this would be more logical IMO (but this is a matter of taste to some extent)
-
 **D4. Does the information in this file belong here in the documentation tree? File contained in TOC tree?**
 
    - SLI tutorial not in "tutorials" folder, not even in TOC tree
-   - currently, backwards compatibility break/transition information is partially scattered across guides, nonexistent (dead links) and in a "NEST 2 to NEST 3 transition guide".
+   - currently, backwards compatibility break/transition information is partially scattered across guide(s), partially apparently-removed-but-still-linked-to, partially in a "NEST 2 to NEST 3 transition guide".
 
 **D5. Did you use Grammarly for spelling, grammar, and writing suggestions?**
    
