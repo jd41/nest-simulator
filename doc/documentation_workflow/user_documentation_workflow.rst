@@ -84,7 +84,7 @@ Documentation level - should be checked by Doc team
    - The free tier of `Grammarly <https://www.grammarly.com/>`_ is useful and contains a spell checker.
    - The paid tier is better and makes helpful suggestions regarding style and readability.
 
-**D6. If you document some change associated with a string (function name etc.), did you `grep -r <string> <NEST-SRC>` to see if the documentation needs to be changed somewhere else?**
+**D6. If you document some change associated with a string (function name etc.), or changed a filename/removed a file, did you `grep -r <string/file-without-suffix/file-with-suffix> <NEST-SRC>` to see if the documentation needs to be changed somewhere else?**
 
 **D7. Some pieces of texts are repeated multiple times throughout the documentation. If you changed one, did you use `grep -r <string> <NEST-SRC>` to find them all?**
 
