@@ -53,7 +53,7 @@ When you write or review a documentation PR, please consider the following sugge
 .. code-block::
 
    ### Suggestion-list
-   From [this version of the documentation suggestion-list](https://github.com/jd41/nest-simulator/blob/a4d172748bd1a1b239dd83c46ce91546a55e62a1/doc/documentation_workflow/user_documentation_workflow.rst), I checked D1-D3, P1-P3, C2.
+   From [this version of the documentation suggestion-list](https://github.com/jd41/nest-simulator/blob/bef130c4daca08ff7e47a356290ab23fb1cc1615/doc/documentation_workflow/user_documentation_workflow.rst#documentation-suggestion-list), I checked D1-D3, P1-P3, C2.
    #### Notes:
    D2: Some notes/discussion regarding that checklist item.
 
